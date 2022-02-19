@@ -1,12 +1,17 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import HighlightInsert from './components/HighlightInsert.vue'
+import HighlightCover from './components/HighlightCover.vue'
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <div id="app">
+    <div>
+      <highlight-insert></highlight-insert>
+    </div>
+    <div class="highlight-cover">
+      <highlight-cover></highlight-cover>
+    </div>
+  </div>
 </template>
 
 <style>
@@ -14,8 +19,10 @@ import HelloWorld from './components/HelloWorld.vue'
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+}
+.highlight-cover {
+  margin-left: 100px;
 }
 </style>
